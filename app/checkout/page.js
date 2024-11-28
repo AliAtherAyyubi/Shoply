@@ -2,11 +2,11 @@ import Link from "next/link";
 
 export default function Checkout() {
     return (
-      <div className="bg-gray-50 py-8">
+      <div className="bg-gray-50">
         {/* Breadcrumb Section */}
-        <section className="mb-8">
-          <div className="container mx-auto px-4">
-            <div className="text-center">
+        <section className="mb-8 bg-gray-200 py-8">
+          <div className="container px-4">
+            <div className="text-left ml-20">
               <h4 className="text-2xl font-semibold">Check Out</h4>
               <div className="text-sm text-gray-600 space-x-2 mt-2">
                 <Link href="/" className="hover:text-blue-600">Home</Link>
@@ -115,9 +115,9 @@ export default function Checkout() {
                       </div>
                     </div>
                     <div className="mt-6">
-                      <button type="submit" className="w-full bg-pink-600 text-white py-2 rounded hover:bg-pink-700">
+                      <Link href={'/cart'}><button type="submit" className="w-full bg-pink-600 text-white py-2 rounded hover:bg-pink-700">
                         PLACE ORDER
-                      </button>
+                      </button></Link>
                     </div>
                   </div>
                 </div>

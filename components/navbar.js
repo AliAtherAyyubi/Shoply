@@ -37,10 +37,15 @@ export default function Navbar() {
           </li>
         </ul>
       </div>
+     <Link href={'/login'}>
+     <button type="button"
+        className="px-5 py-2 absolute top-3 right-16 rounded-lg text-white text-sm tracking-wider font-medium  bg-pink-500 hover:bg-pink-600 active:bg-pink-700">Login</button>
+     </Link>
+
       <i onClick={toggleCart}  className="fa-solid fa-cart-shopping text-xl absolute top-5 right-5 cursor-pointer"></i>
         {/* Sidebar */}
 
-      <div ref={cartRef} className="absolute text-black top-0 right-0 h-full w-80 bg-pink-100 shadow-lg z-50 transform transition-transform duration-300 translate-x-full">
+      <div ref={cartRef} className="absolute text-black top-0 right-0 h-full w-80 bg-pink-200 shadow-lg z-50 transform transition-transform duration-300 translate-x-full">
          
             <button>
               <i onClick={toggleCart} className="fa-solid fa-xmark text-black text-xl absolute top-2 right-3"></i>
@@ -57,7 +62,7 @@ export default function Navbar() {
             <button className="bg-pink-600 text-white px-4 py-2 mr-5 rounded">
               Clear
             </button>
-            <Link href={'/checkout'}>
+            <Link href={'/cart'}>
             <button className="bg-pink-600 text-white px-4 py-2 rounded" onClick={toggleCart}>
             <i class="fa-solid fa-bag-shopping text-lg mx-2"></i>
               Checkout
