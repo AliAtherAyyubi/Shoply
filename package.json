@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "express": "^4.21.2",
     "mongoose": "^8.8.3",
     "next": "15.0.2",
     "react": "19.0.0-rc-02c0e824-20241028",
@@ -16,6 +17,8 @@
     "swiper": "^11.1.15"
   },
   "devDependencies": {
+    "@types/node": "22.10.1",
+    "@types/react": "18.3.12",
     "eslint": "^8",
     "eslint-config-next": "15.0.2",
     "postcss": "^8",
