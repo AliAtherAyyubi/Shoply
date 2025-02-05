@@ -115,7 +115,7 @@ export default function Checkout() {
                       </div>
                     </div>
                     <div className="mt-6">
-                      <Link href={'/cart'}><button type="submit" className="w-full bg-pink-600 text-white py-2 rounded hover:bg-pink-700">
+                      <Link href={'/pages/cart'}><button type="submit" className="w-full bg-pink-600 text-white py-2 rounded hover:bg-pink-700">
                         PLACE ORDER
                       </button></Link>
                     </div>

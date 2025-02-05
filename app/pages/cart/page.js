@@ -1,9 +1,14 @@
-import CartItemCard from '@/components/cartItem2'
-import React from 'react'
+
+'use-client'
+
+import CartItemCard from '@/components/Cart/cartItem2'
+import CartSideBar from '@/components/Cart/sideBar'
+// import React from 'react'
 
 export default function CartPage() {
   return (
     <div className="font-sans max-w-6xl max-lg:max-w-2xl mx-auto bg-white p-4">
+        <CartSideBar/>
     <div className="grid lg:grid-cols-2 gap-12">
         <div>
             <div className="bg-gray-100 p-6 rounded-md">

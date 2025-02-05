@@ -1,5 +1,7 @@
 ////
 
+import ProductCard from "@/components/Product/card";
+
 export default function Home() {
   return (
     <div className="bg-gray-50 text-gray-800">
@@ -36,16 +38,7 @@ export default function Home() {
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold text-center mb-8">Featured Products</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="border rounded-lg overflow-hidden bg-white shadow-md">
-                <img src="/img/product-1.jpg" className="w-full h-60 object-cover" />
-                <div className="p-4">
-                  <h3 className="font-semibold text-lg">Product Name</h3>
-                  <p className="mt-2 text-gray-600">$49.99</p>
-                  <button className="mt-4 px-4 py-2 bg-pink-600 text-white rounded-lg hover:bg-pink-700 w-full">
-                    Add to Cart
-                  </button>
-                </div>
-              </div>
+           <ProductCard title={'Shooting Stars Shoes'} price={'45.9'}/>
           </div>
         </div>
       </section>

@@ -20,3 +20,37 @@ body {
 	font-family: "Nunito Sans", sans-serif;
   overflow-x: hidden;
 }
+
+.nav-links{
+  margin-left: 25px;
+  padding: 5px 15px;
+}
+.nav-links:hover{
+  /* padding: 0px 10px; */
+  border-radius: 20px;
+  background-color: rgba(255, 192, 203, 0.516);
+
+}
+.nav-icon{
+  color: rgb(255, 157, 173);
+  font-size: 20px;
+  cursor: pointer;
+}
+.nav-icon:hover{
+  color: red;
+}
+
+.product-icon{
+  background-color: white;
+  font-size: 15px;
+  padding: 10px;
+  border-radius:20%;
+  margin-right: 5px;
+  cursor: pointer;
+  transition: 0.3s all;
+}
+
+.product-icon:hover{
+  background-color: pink;
+
+}

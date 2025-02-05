@@ -4,14 +4,15 @@ import mongoose from "mongoose";
 
 const productSchema= mongoose.Schema({
     productId:String,
-    name:String,
+    title:String,
     description: String,
-    price:double,
-    size:double,
-    address:String,
+    price:Number,
+    size:{type: Number},
+    address:{type:String},
 
 });
 
-const User= mongoose.model('User',userSchema);
+mongoose.models={}
+const Product= mongoose.model('products',productSchema);
 //
-export default User;
+export default Product;
