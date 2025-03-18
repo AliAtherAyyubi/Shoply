@@ -2,6 +2,59 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Custom Swiper Styles */
+.swiper-button-next,
+.swiper-button-prev {
+  color: white !important;
+  background: rgba(0, 0, 0, 0.3);
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50%;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 20px !important;
+}
+
+.swiper-pagination-bullet {
+  background: white !important;
+  opacity: 0.5 !important;
+  width: 10px !important;
+  height: 10px !important;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1 !important;
+  background: white !important;
+}
+
+.swiper-pagination {
+  bottom: 20px !important;
+}
+
+/* Add smooth transitions */
+.swiper-slide {
+  transition: all 0.3s ease;
+}
+
+/* Ensure proper z-index for navigation elements */
+.swiper-button-next,
+.swiper-button-prev,
+.swiper-pagination {
+  z-index: 20 !important;
+}
+
+
+
+/* Hide navigation buttons on mobile */
+@media (max-width: 640px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none !important;
+  }
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -17,7 +70,7 @@
 body {
   color: var(--foreground);
   background: var(--background);
-	font-family: "Nunito Sans", sans-serif;
+	font-family: "Inter", sans-serif;
   overflow-x: hidden;
 }
 
@@ -53,4 +106,15 @@ body {
 .product-icon:hover{
   background-color: pink;
 
+}
+
+@layer utilities {
+  .flex-center{
+    @apply flex items-center justify-center;
+  }
+
+  .bg-primary{
+    @apply bg-gradient-to-r from-pink-500 to-red-500;
+  }
+  
 }

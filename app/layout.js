@@ -40,7 +40,7 @@ export default function RootLayout({ children }) {
         <title>Shoply</title>
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={` antialiased`}
       >
         <Navbar />
 
