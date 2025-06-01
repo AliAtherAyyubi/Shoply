@@ -163,4 +163,10 @@ export const sellingProducts = [
     originalPrice: "219.99"
   }
 ];
+
+export const productImgs = [
+  "https://m.media-amazon.com/images/I/818b3hI8d9L._AC_SX679_.jpg",
+  "https://m.media-amazon.com/images/I/91O0Z9dabIS._AC_SX679_.jpg",
+  "https://m.media-amazon.com/images/I/81OirEK-6yL._AC_SX679_.jpg",
+];
         

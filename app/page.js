@@ -56,6 +56,8 @@ export default function Home() {
 
   return (
     <div className="bg-gray-50 text-gray-800">
+  
+
       {/* Hero Section with Swiper */}
       <section className="relative h-screen">
         <Swiper

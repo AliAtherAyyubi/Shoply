@@ -1,8 +1,10 @@
+import Link from 'next/link';
 import React from 'react'
 import { FaStar, FaShoppingCart, FaHeart, FaEye, FaCartPlus } from "react-icons/fa";
 
 export default function ProductCard({ title, price, image, rating, sold, discount, originalPrice }) {
   return (
+    <Link href={'/pages/productdetail'}>
     <div className="border rounded-lg overflow-hidden bg-white shadow-md relative cursor-pointer group hover:shadow-xl transition duration-300">
       <div className="relative">
         {/* Discount Badge */}
@@ -26,28 +28,27 @@ export default function ProductCard({ title, price, image, rating, sold, discoun
         </div>
 
         {/* Product Image */}
-        <img 
-          src={image} 
+        <img
+          src={image}
           alt={title}
-          className="w-full h-64 object-cover transition duration-300 group-hover:scale-105" 
+          className="w-full h-64 object-cover transition duration-300 group-hover:scale-105"
         />
       </div>
 
       {/* Product Details */}
       <div className="p-4">
         <h2 className="font-semibold text-lg mb-2 line-clamp-2">{title}</h2>
-        
+
         {/* Rating and Sales */}
         <div className="flex items-center gap-2 mb-2">
           <div className="flex items-center">
             {[...Array(5)].map((_, index) => (
               <FaStar
                 key={index}
-                className={`text-sm ${
-                  index < Math.floor(rating)
+                className={`text-sm ${index < Math.floor(rating)
                     ? "text-yellow-400"
                     : "text-gray-300"
-                }`}
+                  }`}
               />
             ))}
             <span className="text-sm text-gray-600 ml-1">({rating})</span>
@@ -70,5 +71,6 @@ export default function ProductCard({ title, price, image, rating, sold, discoun
         </button> */}
       </div>
     </div>
+    </Link>
   );
 }

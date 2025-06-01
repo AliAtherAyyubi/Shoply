@@ -31,7 +31,7 @@ function toggleCart(){
 
         {/* Logo */}
         <div className="flex items-center space-x-2">
-          <Link href={'/'}><img className="w-40 md:w-52" src="/img/logo.png" alt="Logo" /></Link>
+          <Link href={'/'}><img className=" w-[8vw] max-md:w-[20vw]" src="/img/logo.png" alt="Logo" /></Link>
         </div>
 
         {/* Search Bar */}
@@ -43,19 +43,33 @@ function toggleCart(){
           />
           <i className="fa-solid fa-magnifying-glass absolute right-3 top-3 text-black text-xl"></i>
         </div>
+        {localStorage.getItem('user') && (
+          <div className="hidden md:flex relative mx-4 ">
+            <Link href={'/auth/login'}>
+              <button className="bg-pink-400 px-5 py-2 rounded-md cursor-pointer hover:bg-pink-500 font-medium text-white">Login</button>
+            </Link>
+            <Link href={'/auth/signup'}>
+              <button className="bg-pink-400 px-5 py-2 mx-2 rounded-md cursor-pointer hover:bg-pink-500 font-medium text-white">Sign Up</button>
+            </Link>
+          </div>
+        )}
+        
 
         {/* Icons */}
-        <div className="flex items-center space-x-6">
-        <i className="fa-solid fa-user nav-icon"></i>
-        <i className="fa-solid fa-heart nav-icon"></i>
-          
-          <div  className="relative">
-            <i onClick={toggleCart}  className="fa-solid fa-cart-shopping nav-icon"></i>
-            <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">
-              3
-            </span>
+        {typeof window !== "undefined" && localStorage.getItem('user') && (
+          <div className="flex items-center space-x-6">
+            <Link href={'/pages/profile'}>
+              <i className="fa-solid fa-user nav-icon"></i>
+            </Link>
+            <i className="fa-solid fa-heart nav-icon"></i>
+            <div className="relative">
+              <i onClick={toggleCart} className="fa-solid fa-cart-shopping nav-icon"></i>
+              <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">
+                3
+              </span>
+            </div>
           </div>
-        </div>
+        )}
       </nav>
 
       {/* Categories Bar (Visible only on large screens) */}

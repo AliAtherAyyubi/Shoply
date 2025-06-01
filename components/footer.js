@@ -11,7 +11,7 @@ export default function Footer() {
       <div>
         <div className="footer__logo mb-4">
           <Link href="#">
-            <img src="/img/footer-logo.png" alt="Footer Logo" className="w-36" />
+            <img src="/img/footerlogo.png" alt="Footer Logo" className="w-36" />
           </Link>
         </div>
         <p className="text-[#b7b7b7] text-sm">
@@ -73,8 +73,8 @@ export default function Footer() {
               placeholder="Your email"
               className="w-full border border-[#b7b7b7] rounded-lg px-4 py-2 text-[#b7b7b7] focus:outline-none focus:ring-2 focus:ring-[#b7b7b7]"
             />
-            <button type="submit" className="bg-[#b7b7b7] text-white p-2 rounded-lg">
-              <span className="icon_mail_alt">📧</span>
+            <button type="submit" className="bg-pink-500 text-white p-2 rounded-lg">
+              <span className="icon_mail_alt">Send</span>
             </button>
           </form>
         </div>
