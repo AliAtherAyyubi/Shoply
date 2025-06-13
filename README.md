@@ -66,7 +66,6 @@ This is a full-stack e-commerce application built with:
 - Mongoose (MongoDB ODM)
 - JSON Web Tokens (JWT)
 - Bcrypt (password hashing)
-- Multer (file uploads)
 - Stripe (payment processing)
 
 ### Database
@@ -80,58 +79,6 @@ This is a full-stack e-commerce application built with:
 - MongoDB Atlas account or local MongoDB installation
 - Stripe account for payment processing
 - Git
-
-### Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/ecommerce-project.git
-   cd ecommerce-project
-   ```
-
-2. Install dependencies for both frontend and backend:
-   ```bash
-   # Install frontend dependencies
-   cd frontend
-   npm install
-
-   # Install backend dependencies
-   cd ../backend
-   npm install
-   ```
-
-3. Set up environment variables:
-   - Create a `.env.local` file in the frontend directory with:
-     ```
-     NEXT_PUBLIC_API_URL=http://localhost:5000
-     NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=your_stripe_publishable_key
-     ```
-
-   - Create a `.env` file in the backend directory with:
-     ```
-     MONGODB_URI=your_mongodb_connection_string
-     JWT_SECRET=your_jwt_secret_key
-     JWT_EXPIRE=30d
-     STRIPE_SECRET_KEY=your_stripe_secret_key
-     FRONTEND_URL=http://localhost:3000
-     PORT=5000
-     NODE_ENV=development
-     ```
-
-4. Start the development servers:
-   ```bash
-   # In one terminal (backend)
-   cd backend
-   npm run dev
-
-   # In another terminal (frontend)
-   cd frontend
-   npm run dev
-   ```
-
-5. Access the application:
-   - Frontend: http://localhost:3000
-   - Backend API: http://localhost:5000
 
 ## Project Structure
 
@@ -162,8 +109,6 @@ ecommerce-project/
 │
 ├── backend/                   # Node.js backend
 │   ├── config/                # Configuration files
-│   ├── controllers/           # Route controllers
-│   ├── middleware/            # Express middleware
 │   ├── models/                # Mongoose models
 │   ├── routes/                # API routes
 │   ├── utils/                 # Utility functions
@@ -173,71 +118,6 @@ ecommerce-project/
 ├── .gitignore
 └── README.md
 ```
-
-## Available Scripts
-
-### Frontend (Next.js)
-- `npm run dev`: Start development server
-- `npm run build`: Create production build
-- `npm start`: Start production server
-- `npm run lint`: Run ESLint
-
-### Backend (Node.js)
-- `npm run dev`: Start development server with nodemon
-- `npm start`: Start production server
-- `npm run test`: Run tests
-
-## Deployment
-
-### Frontend Deployment
-1. Build the production version:
-   ```bash
-   cd frontend
-   npm run build
-   ```
-
-2. Deploy to Vercel (recommended for Next.js):
-   - Connect your GitHub repository to Vercel
-   - Configure environment variables in Vercel dashboard
-   - Deploy
-
-### Backend Deployment
-1. Set up a MongoDB Atlas cluster if not already done
-2. Deploy to platforms like:
-   - Render
-   - Heroku
-   - AWS Elastic Beanstalk
-   - DigitalOcean App Platform
-
-3. Update frontend environment variables to point to your deployed backend
-
-## Environment Variables
-
-### Frontend (`.env.local`)
-```
-NEXT_PUBLIC_API_URL=your_backend_api_url
-NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=your_stripe_publishable_key
-```
-
-### Backend (`.env`)
-```
-MONGODB_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret_key
-JWT_EXPIRE=30d
-STRIPE_SECRET_KEY=your_stripe_secret_key
-FRONTEND_URL=your_frontend_url
-PORT=5000
-NODE_ENV=production
-```
-
-## Contributing
-
-1. Fork the project
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
