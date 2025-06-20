@@ -32,11 +32,9 @@ export default function RootLayout({ children }) {
         <title>Shoply</title>
       </head>
       <body className={inter.className}>
-        <Providers>
-          <Navbar />
+        <Navbar />
           {children}
           <Footer />
-        </Providers>
         <ToastContainer/>
       </body>
     </html>
