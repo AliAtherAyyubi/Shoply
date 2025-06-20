@@ -1,123 +1,46 @@
-# E-Commerce Project with Next.js, Tailwind CSS, MongoDB, and Node.js
 
-## Project Overview
+# 🛍️ E-Commerce Frontend – Next.js + Tailwind CSS
 
-This is a full-stack e-commerce application built with:
-- **Frontend**: Next.js (React framework) with Tailwind CSS for styling
-- **Backend**: Node.js with Express.js
-- **Database**: MongoDB (with Mongoose ODM)
-- **Authentication**: JWT (JSON Web Tokens)
-- **Payment Integration**: Stripe API
+A modern, responsive e-commerce frontend built using **Next.js (App Router)** and **Tailwind CSS**.
 
-## Features
+---
 
-### User Authentication
-- User registration and login
-- Password reset functionality
-- Role-based access (user/admin)
-- JWT authentication
-- Protected routes
+## ⚙️ Tech Stack
 
-### Product Management
-- Product catalog with categories
-- Product search and filtering
-- Product details page with images
-- Product reviews and ratings
-- Pagination for product listings
+* **Framework**: Next.js 14 (App Router)
+* **Styling**: Tailwind CSS
+* **Forms**: React Hook Form
+* **UI**: React Icons, React Toastify
+* **State**: Context API & custom hooks
 
-### Shopping Cart
-- Add/remove products from cart
-- Adjust product quantities
-- Save cart to user account
-- Cart summary with totals
+---
 
-### Checkout Process
-- Shipping address collection
-- Payment method selection (Stripe integration)
-- Order summary
-- Order confirmation
+## ✨ Features
 
-### User Account
-- Order history
-- Profile management
-- Address book
-- Wishlist functionality
+* ✅ Product listing & filtering
+* ✅ Product detail pages
+* ✅ Shopping cart with quantity updates
+* ✅ User authentication pages (Login, Register, Profile)
+* ✅ Fully responsive design
+* ✅ Clean, modular code with reusable components
 
-### Admin Dashboard
-- Product management (CRUD operations)
-- Order management
-- User management
-- Sales analytics
-- Inventory management
+---
 
-## Technologies Used
+## 🖼️ Screenshots
+### Homepage
+> ![](./Screenshots/shoply.jpg)
+---
 
-### Frontend
-- Next.js (App Router)
-- React.js
-- Tailwind CSS
-- React Hook Form
-- React Toastify (notifications)
-- React Icons
+## 🚀 Getting Started
 
-### Backend
-- Node.js
-- Express.js
-- Mongoose (MongoDB ODM)
-- JSON Web Tokens (JWT)
-- Bcrypt (password hashing)
-- Stripe (payment processing)
-
-### Database
-- MongoDB (NoSQL database)
-- Mongoose schemas for data modeling
-
-## Getting Started
-
-### Prerequisites
-- Node.js (v18 or later)
-- MongoDB Atlas account or local MongoDB installation
-- Stripe account for payment processing
-- Git
-
-## Project Structure
-
+```bash
+cd frontend
+npm install
+npm run dev
 ```
-ecommerce-project/
-├── frontend/                  # Next.js application
-│   ├── public/                # Static files
-│   ├── src/
-│   │   ├── app/               # App router directory
-│   │   │   ├── (auth)/        # Authentication routes
-│   │   │   ├── (main)/        # Main application routes
-│   │   │   ├── admin/         # Admin routes
-│   │   │   ├── api/           # API routes
-│   │   │   ├── cart/          # Cart related pages
-│   │   │   ├── products/      # Product related pages
-│   │   │   ├── user/          # User account pages
-│   │   │   ├── layout.tsx     # Main layout
-│   │   │   └── page.tsx       # Home page
-│   │   ├── components/        # Reusable components
-│   │   ├── contexts/          # React contexts
-│   │   ├── hooks/             # Custom hooks
-│   │   ├── lib/               # Utility functions
-│   │   ├── models/            # TypeScript interfaces
-│   │   ├── styles/            # Global styles
-│   │   └── utils/             # Utility functions
-│   ├── next.config.js         # Next.js configuration
-│   └── tailwind.config.js     # Tailwind CSS configuration
-│
-├── backend/                   # Node.js backend
-│   ├── config/                # Configuration files
-│   ├── models/                # Mongoose models
-│   ├── routes/                # API routes
-│   ├── utils/                 # Utility functions
-│   ├── app.js                 # Express app setup
-│   └── server.js              # Server entry point
-│
-├── .gitignore
-└── README.md
-```
-## License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+---
+
+## 📜 License
+
+MIT License
